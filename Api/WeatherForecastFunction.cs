@@ -43,7 +43,7 @@ namespace Api
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = temp = randomNumber.Next(-20, 55),
                 Summary = GetSummary(temp)
-            }).ToArray();
+            }).ToArray().Take(1);
 
             return new OkObjectResult(result);
         }
